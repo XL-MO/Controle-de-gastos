@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Gastos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Tela do Dashboard -->
+    <div id="dashboard" class="container">
+        <h1>Dashboard</h1>
+        <div class="cards">
+            <div class="card">
+                <p>Saldo atual</p>
+                <h3 id="saldoAtual">R$ 0,00</h3>
+            </div>
+            <div class="card">
+                <p>Receitas</p>
+                <h3 id="totalReceitas">R$ 0,00</h3>
+            </div>
+            <div class="card">
+                <p>Despesas</p>
+                <h3 id="totalDespesas">R$ 0,00</h3>
+            </div>
+            <div class="card">
+                <p>Cartão de crédito</p>
+                <h3>R$ 0,00</h3>
+            </div>
+        </div>
+        <div class="categories">
+            <div class="category">
+                <h2>Despesas por categoria</h2>
+                <div class="category-content">
+                    <p>Adicione seus gastos no mês atual </p>
+                    <button id="btnAddExpense">Adicionar Despesa</button>
+                </div>
+            </div>
+            <div class="category">
+                <h2>Receitas por categoria</h2>
+                <div class="category-content">
+                    <p>Adicione seus ganhos no mês atual </p>
+                    <button id="btnAddIncome">Adicionar Receita</button>
+                </div>
+            </div>
+            <div class="category">
+                <h2>Despesa cartões crédito</h2>
+                <div class="category-content">
+                    <p>Adicione seus gastos no mês atual </p>
+                    <button id="btnAddCreditExpense">Adicionar Despesa Cartão</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tela de Adicionar Despesa -->
+    <div id="add-expense" class="container hidden">
+        <h1>Adicionar Despesa</h1>
+        <form id="form-add-expense">
+            <label for="description">Descrição:</label>
+            <input type="text" id="description-expense" name="description">
+            <label for="amount">Valor:</label>
+            <input type="number" id="amount-expense" name="amount">
+            <label for="date">Data:</label>
+            <input type="date" id="date-expense" name="date">
+            <button type="submit">Adicionar</button>
+            <button type="button" onclick="showDashboard()">Cancelar</button>
+            <button onclick="showDashboard()">Voltar ao Dashboard</button>
+        </form>
+            </div>
+
+    <!-- Tela de Adicionar Receita -->
+    <div id="add-income" class="container hidden">
+        <h1>Adicionar Receita</h1>
+        <form id="form-add-income">
+            <label for="description">Descrição:</label>
+            <input type="text" id="description-income" name="description">
+            <label for="amount">Valor:</label>
+            <input type="number" id="amount-income" name="amount">
+            <label for="date">Data:</label>
+            <input type="date" id="date-income" name="date">
+            <button type="submit">Adicionar</button>
+            <button type="button" onclick="showDashboard()">Cancelar</button>
+            <button onclick="showDashboard()">Voltar ao Dashboard</button>
+        </form>
+    </div>
+
+    <!-- Tela de Adicionar Despesa Cartão -->
+    <div id="add-credit-expense" class="container hidden">
+        <h1>Adicionar Despesa Cartão</h1>
+        <form id="form-add-credit-expense">
+            <label for="description-credit">Descrição:</label>
+            <input type="text" id="description-credit" name="description">
+            <label for="amount-credit">Valor:</label>
+            <input type="number" id="amount-credit" name="amount">
+            <label for="date-credit">Data:</label>
+            <input type="date" id="date-credit" name="date">
+            <button type="submit">Adicionar</button>
+            <button type="button" onclick="showDashboard()">Cancelar</button>
+            <button onclick="showDashboard()">Voltar ao Dashboard</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
